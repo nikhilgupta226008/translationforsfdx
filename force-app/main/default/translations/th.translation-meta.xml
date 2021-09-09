@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Translations xmlns="http://soap.sforce.com/2006/04/metadata">
     <customLabels>
-        <label><!-- CEC ShipmentIdentifier Applicable --></label>
+        <label>ใช้บังคับได้</label>
         <name>CEC_ShipmentIdentifier_Applicable</name>
     </customLabels>
     <customLabels>
-        <label><!-- CEC Shipment Additional Info --></label>
+        <label>ข้อมูลเพิ่มเติม</label>
         <name>CEC_Shipment_Additional_Info</name>
     </customLabels>
     <customLabels>
-        <label><!-- CEC Shipment Non Applicable Error --></label>
+        <label>คุณต้องเลือกตัวระบุการจัดส่งอย่างน้อยหนึ่งรายการเพื่อดำเนินการต่อ</label>
         <name>CEC_Shipment_Non_Applicable_Error</name>
     </customLabels>
 </Translations>

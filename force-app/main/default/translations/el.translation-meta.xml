@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Translations xmlns="http://soap.sforce.com/2006/04/metadata">
     <customLabels>
-        <label><!-- CEC ShipmentIdentifier Applicable --></label>
+        <label>Εφαρμόσιμος</label>
         <name>CEC_ShipmentIdentifier_Applicable</name>
     </customLabels>
     <customLabels>
-        <label><!-- CEC Shipment Additional Info --></label>
+        <label>Πρόσθετες πληροφορίες</label>
         <name>CEC_Shipment_Additional_Info</name>
     </customLabels>
     <customLabels>
