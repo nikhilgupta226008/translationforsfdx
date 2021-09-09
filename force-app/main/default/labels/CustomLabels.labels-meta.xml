@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>CEC_ShipmentIdentifier_Applicable</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CEC ShipmentIdentifier Applicable</shortDescription>
+        <value>Applicable</value>
+    </labels>
+    <labels>
+        <fullName>CEC_Shipment_Additional_Info</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CEC Shipment Additional Info</shortDescription>
+        <value>Additional Info</value>
+    </labels>
+    <labels>
+        <fullName>CEC_Shipment_Non_Applicable_Error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CEC Shipment Non Applicable Error</shortDescription>
+        <value>You must select one or more shipment identifiers in order to proceed.</value>
+    </labels>
+</CustomLabels>

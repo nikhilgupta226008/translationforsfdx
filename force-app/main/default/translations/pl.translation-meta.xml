@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customLabels>
+        <label><!-- CEC ShipmentIdentifier Applicable --></label>
+        <name>CEC_ShipmentIdentifier_Applicable</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CEC Shipment Additional Info --></label>
+        <name>CEC_Shipment_Additional_Info</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CEC Shipment Non Applicable Error --></label>
+        <name>CEC_Shipment_Non_Applicable_Error</name>
+    </customLabels>
+</Translations>
