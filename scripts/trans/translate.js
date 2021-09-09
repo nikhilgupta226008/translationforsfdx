@@ -27,7 +27,7 @@ const {Directory} =require('./lib/dir');
         await Directory.clean(conversionDir);
         await Git.commit("SFDX CLEAN",{sfdxProjectPath})
         console.log("Cleaned SFDX Components")
-        //await new SalesforceTranslationExport(drive2SFDX,config).fetchTranslationExport(config.ExportIdentifier)
+        await new SalesforceTranslationExport(drive2SFDX,config).fetchTranslationExport(config.ExportIdentifier)
         console.log("Fetched Translations Export")
         await Git.commit("Fetched Translations Export",{sfdxProjectPath})
         var transaltationMetadataExtractor=new TransaltationMetadataExtractor(allowedLanguages,config,drive2SFDX,drive2SFDX)
