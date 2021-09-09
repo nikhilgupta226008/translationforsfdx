@@ -14,9 +14,9 @@
     "es_MX": "Información adicional",
     "th": "ข้อมูลเพิ่มเติม",
     "vi": "Thông tin bổ sung",
-    "package": "Misssing",
-    "packageName": "Misssing",
-    "masterInfoLabel": "Misssing",
+    "package": "CustomLabel$CEC_Shipment_Additional_Info",
+    "packageName": "CustomLabel",
+    "masterInfoLabel": "Additional Info",
     "file": "shipmentIdentifier.xlsx",
     "sheet": "Sheet3"
   },
@@ -35,9 +35,9 @@
     "es_MX": "Aplicable",
     "th": "ใช้บังคับได้",
     "vi": "Áp dụng",
-    "package": "Misssing",
-    "packageName": "Misssing",
-    "masterInfoLabel": "Misssing",
+    "package": "CustomField$CEC_ShippingIdentifier__c.CEC_Applicable__c | CustomLabel$CEC_ShipmentIdentifier_Applicable",
+    "packageName": "CustomField | CustomLabel",
+    "masterInfoLabel": "Applicable",
     "file": "shipmentIdentifier.xlsx",
     "sheet": "Sheet3"
   },
@@ -57,9 +57,9 @@
     "es_MX": "Debe seleccionar uno o más identificadores de envío para continuar.",
     "th": "คุณต้องเลือกตัวระบุการจัดส่งอย่างน้อยหนึ่งรายการเพื่อดำเนินการต่อ",
     "vi": "Bạn phải chọn một hoặc nhiều định danh giao hàng để tiến hành.",
-    "package": "Misssing",
-    "packageName": "Misssing",
-    "masterInfoLabel": "Misssing",
+    "package": "CustomLabel$CEC_Shipment_Non_Applicable_Error",
+    "packageName": "CustomLabel",
+    "masterInfoLabel": "You must select one or more shipment identifiers in order to proceed.",
     "file": "shipmentIdentifier.xlsx",
     "sheet": "Sheet2"
   }
