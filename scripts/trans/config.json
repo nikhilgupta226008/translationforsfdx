@@ -1,0 +1,208 @@
+{
+    "SourceOfTruthOrg": "https://upsdrive--cecsup40.my.salesforce.com",
+    "DevOrg": "https://upsdrive--cecsup40.my.salesforce.com",
+    "ExportIdentifier": "2021-09-09",
+    "SFDXProject": "../../",
+    "TranslationValidations": "TranslationValidations",
+    "currentTransaltionsFile": "TranslationExistingSheet/SalesforceCurrentTranslations.xlsx",
+    "transaltionRequestExcels": "TranslationRequestExcels",
+    "transaltionRequestExcelsLabelRow": 1,
+    "transaltionRequestExcelsLastRow": 30,
+    "delta":true,
+    "allowedMetdata": [
+        {
+            "name": "ButtonOrLink"
+        },
+        {
+            "name": "CustomField",
+            "include": {
+                "sObjects": [
+                    "PersonAccount",
+                    "CEC_User_Out_of_Office__c",
+                    "Account",
+                    "Activity",
+                    "Case",
+                    "Contact",
+                    "EmailMessage",
+                    "User",
+                    "CEC_Alert_Message_Junction__c",
+                    "CEC_ShippingIdentifier__c",
+                    "CEC_Skill_Group__c",
+                    "CEC_User_Skill_Group__c",
+                    "IVR_Data__c",
+                    "VA_Transcript__c",
+                    "CEC_ShipmentIdentifierType__mdt"
+                ]
+            }
+        },
+        {
+            "name": "LayoutSection",
+            "include": [
+                "PersonAccount.CEC Person Account Layout",
+                "Account.CEC Account Layout",
+                "Contact.CEC Contact Layout",
+                "User.User Layout",
+                "CEC_Alert_Message__c.CEC Account Alert Message Layout",
+                "CEC_Alert_Message__c.CEC Alert Message Layout",
+                "CEC_Alert_Message__c.CEC General Alert Message Layout",
+                "CEC_Alert_Message__c.CEC Geography Alert Message Layout",
+                "CEC_Alert_Message__c.CEC Industry Alert Message Layout",
+                "CEC_EFM__c.CEC EFM Layout",
+                "CEC_Email_to_Case_Routing_Table__c.CEC Email to Case Routing Table Layout",
+                "CEC_Queue_To_SLA_Mapping__c.CEC Queue To SLA Mapping Layout",
+                "CEC_Web_to_Case_Routing_Table__c.CEC Web to Case Routing Table Layout",
+                "CEC_User_Out_of_Office__c.CEC User Out of Office Layout",
+                "CEC_ProfileSetup__c.CEC Profile Setup Layout",
+                "CEC_CustomPermissionAndGroupAssignment__c.Custom Permission and Group Assignment Layout",
+                "CEC_BU_SLIC_Destination_Fields_Mapping__c.CEC BU SLIC Destination Fields Mapping Layout",
+                "CEC_SLIC_Queue_Management__c.CEC SLIC Queue Management Layout",
+                "CEC_Case_Alert_Notification_Time__c.Case Alert Notification Time Layout",
+                "CEC_Case_Routing__c.CEC Case Routing Layout",
+                "CEC_Country_Mapping__c.CEC Country Mapping Layout",
+                "CEC_Escalation_Hierarchy__c.Escalation Hierarchy Layout",
+                "CEC_Object_InsertUpdateDelete_Matrix__c.Object Update Matrix Layout",
+                "CEC_Origin_to_Category_Mapping__c.Origin to Category Mapping Layout",
+                "CEC_Origin_to_Category_Mapping__c.Origin to Reason Mapping Layout",
+                "CEC_ShipmentIdentifierType__c.CEC Shipment Identifier Layout",
+                "CEC_ShippingIdentifier__c.Shipment Identifier Layout",
+                "CEC_Skill_Group__c.CEC Skill Group Layout",
+                "CEC_User_Skill_Group__c.CEC User Skill Group Layout",
+                "IVR_Data__c.IVR Data Layout",
+                "I_Want_To_Option_Mapping__c.Field to Picklist Option Mapping Layout",
+                "VA_Transcript__c.VA Transcript Layout",
+                "CEC_Purge_Input__c.CEC Purge Input Layout",
+                "CEC_Purged_Case__c.CEC Purged Case Layout",
+                "Case.CEC Admin AR Case Layout",
+                "Case.CEC Admin Case Layout",
+                "Case.CEC CCR AR Case Layout",
+                "Case.CEC CCR Case Layout",
+                "Case.CEC Case Layout - Supervisor",
+                "Case.CEC Case Layout",
+                "Case.CEC FSG after submission layout",
+                "Case.CEC MYB Case Layout",
+                "Case.CEC Manager AR Case Layout",
+                "Case.CEC Manager Case Layout",
+                "Case.CEC Specialized AR Case Layout",
+                "Case.CEC Specialized Case Layout",
+                "Case.CEC Support Case Layout",
+                "Case.SRC Case Layout"
+            ]
+        },
+        {
+            "name": "PicklistValue",
+            "include": {
+                "StandardValueSet": [
+                    "CaseStatus",
+                    "CasePriority",
+                    "CaseOrigin",
+                    "TaskStatus",
+                    "TaskType",
+                    "TaskPriority"
+                ],
+                "GlobalValueSet": [
+                    "CEC_Case_Category",
+                    "CEC_Case_SubCategory"
+                ]
+            }
+        },
+        {
+            "name": "ValidationFormula"
+        },
+        {
+            "name": "CustomLabel",
+            "include": [
+                "Case_Categorization_Country_Error",
+                "Coporate_Concern_Confirm_Msg",
+                "Increment_Priority_Confirm_Msg",
+                "CEC(.*)"
+            ],
+            "exclude": [
+                {
+                    "Category": "(.*)Configuration(.*)"
+                },
+                "CEC_Case_Substatus_UpdatedByCustomer",
+                "CEC_Case_Priority_Urgent",
+                "CEC_Case_Status_InProgress",
+                "CEC_Case_Status_Escalated",
+                "CEC_Close_Case_Substatus",
+                "CEC_OmniAssignStatus",
+                "CEC_OmniAssignSubStatus",
+                "CECDefaultQueue",
+                "CEC_2nd_Request_Comments",
+                "CEC_AR_Case_ReAssign_Comments",
+                "CEC_Case_Escalation_Reason_Label",
+                "CEC_Case_Resolution",
+                "CEC_Close_A_Case_Comments",
+                "CEC_SPAM_comments",
+                "CEC_Void_comments"
+
+            ]
+        },
+        {
+            "name": "QuickAction",
+            "include": [
+                "Account.Case",
+                "Account.Contact",
+                "Account.CEC_Event",
+                "Account.CEC_Task",
+                "Account.create_a_case",
+                "Case.CEC_Event",
+                "Case.CEC_Task",
+                "Case.Child_Case",
+                "Case.Close_Case_Feed",
+                "Case.Log_a_Call",
+                "Case.New_Child_Case",
+                "Case.Close_Support_Case",
+                "Case.Update_CEC_Case",
+                "Contact.Case",
+                "Contact.CEC_Event",
+                "Contact.CEC_Task",
+                "Contact.Update_CEC_Contact",
+                "CEC_CreateContact",
+                "New_CEC_Contact",
+                "Submit_Feedback"
+            ]
+        }
+    ],
+    "processTransaltionRequestExcels":true,
+    "processTransaltionRequestPicklistExcels":false,
+    "transaltionRequestPicklistExcels":[
+        {
+            "file":"TransaltionRequestPicklistExcels/EU Categories and Sub-Categories - Translations.xlsx",
+            "sheetMap":{
+                "Category Translations":{
+                    "name":"GlobalValueSet",
+                    "member":"CEC_Case_Category"
+                },
+                "Sub-Category Translations":{
+                    "name":"GlobalValueSet",
+                    "member":"CEC_Case_SubCategory"
+                }
+            }
+        }
+    ],
+    "labelConsistency": {
+        "Kê": "Preferred Communication Channel",
+        "SKILLS AND GEOS": "SKILLS & GEOS",
+        "Search Queue ..": "Search Queue...",
+        "search user.": "Search User ..",
+        "Search User…": "Search User ..",
+        "Reassign an Assistance Required Case": "Reassign Assistance Required Case",
+        "Filter Cases by Identifier Value": "Filter Cases by Identifier Value ...",
+        "I WANT TO…": "I Want To...",
+        "255 characters remaining": "{0} characters remaining",
+        "type here…": "type here...",
+        "Log a Call - Inbound": "Log a Call- Inbound",
+        "Log a Call - Outbound": "Log a Call- Outbound",
+        "Outcome / Next Steps": "Outcome/Next Steps",
+        "The record you're about to create looks like a duplicate. You will not be able to create the record after looking at duplicate records.View Duplicates": "The record you're about to create looks like a duplicate. You will be able to create the record after looking at the potential duplicates.",
+        "Contacts cannot be linked without a Email Address. Please Select, Update or Create a contact containing an Email Address.": "Contacts cannot be linked without an Email Address. Please Select, Update or Create a contact containing an Email Address.",
+        "A shipment identifier (tracking number, invoice number, etc...) is required when creating an Assistance Required Case. Please update the Shipment Identifier section": "A shipment identifier (tracking number, invoice number, etc...) is required when creating an Assistance Required Case. Please update the Shipment Identifier section.",
+        "Postal Code is mandatory to be selected for country …": "Postal Code is mandatory to be selected for country",
+        "No records were found based on the current search criteria": "No records were found based on the current search criteria.",
+        "Add / Modify": "Add/Modify",
+        "Please enter 11 or 18 digit, 18 digit should start with 1Z, followed by 8 alphanumerics, followed by 8 numbers -": "Please enter 11 or 18 digit, 18 digit should start with 1Z, followed by 8 alphanumerics, followed by 8 numbers",
+        "Please enter 12 characters beginning with 9 -": "Please enter 12 characters beginning with 9",
+        "Please enter 11 characters (alphanumerical) -": "Please enter 11 characters (alphanumerical)"
+    }
+}

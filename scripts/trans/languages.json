@@ -1,0 +1,158 @@
+[
+    {
+        "Language": "fr",
+        "Label": "FrenchEU",
+        "Label2":"France (FR)",
+        "disabled": false
+    },
+    {
+        "Language": "it",
+        "Label": "ItalianEU",
+        "Label2":"Italy (IT)",
+        "disabled": false
+    },
+    {
+        "Language": "es_MX",
+        "Label": "Spanish (Mexico)LATAM",
+        "disabled": false
+    },
+    {
+        "Language": "ko",
+        "Label": "KoreanAPAC",
+        "disabled": false
+    },
+    {
+        "Language": "zh_CN",
+        "Label": "Chinese (Simplified)APAC",
+        "disabled": false
+    },
+    {
+        "Language": "zh_TW",
+        "Label": "Chinese (Traditional)APAC",
+        "disabled": false
+    },
+    {
+        "Language": "ja",
+        "Label": "JapaneseAPAC",
+        "disabled": false
+    },
+    {
+        "Language": "th",
+        "Label": "ThaiAPAC",
+        "disabled": false
+    },
+    {
+        "Language": "pt_BR",
+        "Label": "Portuguese (Brazil)LATAM",
+        "disabled": false
+    },
+    {
+        "Language": "nl_NL",
+        "Label": "DutchEU",
+        "disabled": false
+    },
+    {
+        "Language": "ru",
+        "Label": "RussianEU",
+        "disabled": false
+    },
+    {
+        "Language": "hu",
+        "Label": "HungarianEU",
+        "disabled": false
+    },
+    {
+        "Language": "cs",
+        "Label": "CzechEU",
+        "disabled": false
+    },
+    {
+        "Language": "el",
+        "Label": "GreekEU",
+        "disabled": false
+    },
+    {
+        "Language": "ro",
+        "Label": "RomanianEU",
+        "disabled": false
+    },
+    {
+        "Language": "pt_PT",
+        "Label": "Portuguese (Europe)EU",
+        "Label2":"Portugal (PT)",
+        "disabled": false
+    },
+    {
+        "Language": "pl",
+        "Label": "PolishEU",
+        "Label2":"Poland (PL)",
+        "disabled": false
+    },
+    {
+        "Language": "en_US",
+        "Label": "English",
+        "disabled": false
+    },
+    {
+        "Language": "da",
+        "Label": "DanishEU",
+        "disabled": false
+    },
+    {
+        "Language": "en_GB",
+        "Label": "English (UK)",
+        "disabled": false
+    },
+    {
+        "Language": "es_AR",
+        "Label": "Spanish (Argentina)LATAM",        
+        "disabled": false
+    },
+    {
+        "Language": "fi",
+        "Label": "FinnishEU",
+        "disabled": false
+    },
+    {
+        "Language": "no",
+        "Label": "NorwegianEU",
+        "disabled": false
+    },
+    {
+        "Language": "sv",
+        "Label": "SwedishEU",
+        "disabled": false
+    },
+    {
+        "Language": "fr_CA",
+        "Label": "FrenchCANADA",
+        "disabled": false
+    },
+    {
+        "Language": "in",
+        "Label": "Indonesian",
+        "disabled": false
+    },
+    {
+        "Language": "tr",
+        "Label": "Turkish",
+        "disabled": false
+    },
+    {
+        "Language": "vi",
+        "Label": "VietnameseAPAC",
+        "disabled": false
+    },
+    {
+        "Language": "de",
+        "Label": "GermanEU",
+        "Label2":"Germany (DE)",
+        "disabled": false
+    },
+    {
+        "Language": "es",
+        "Label": "Spanish (Europe)EU",
+        "Label2":"Spain (ES)",
+        "disabled": false
+    }
+]

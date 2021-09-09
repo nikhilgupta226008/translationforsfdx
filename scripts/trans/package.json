@@ -1,0 +1,35 @@
+{
+  "name": "trans",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Script.js",
+  "dependencies": {
+    "convert-excel-to-json": "^1.7.0",
+    "csv-parser": "^3.0.0",
+    "decode-html": "^2.0.0",
+    "encode-html": "^1.0.1",
+    "fast-xml-parser": "^3.19.0",
+    "fs-extra": "^7.0.1",
+    "jsforce": "^1.10.1",
+    "jsonfile": "^6.1.0",
+    "jszip": "^3.6.0",
+    "node-fetch": "^2.6.1",
+    "nodegit": "^0.27.0",
+    "prompt-promise": "^1.0.3",
+    "salesforce-alm": "^52.0.4",
+    "xml-js": "^1.6.11",
+    "xmldom-sfdx-encoding": "^0.1.30"
+  },
+  "devDependencies": {
+    "install": "^0.13.0",
+    "npm": "^7.19.1",
+    "winston": "^3.3.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "translate": "node translate.js",
+    "debug": "node --inspect C:\\Users\\manchoud1\\AppData\\Roaming\\npm\\node_modules\\sfdx-cli\\bin\\run force:source:convert     -d mdapi-source/updated-package     -n \"My Managed Package\"  --json"
+  },
+  "author": "",
+  "license": "ISC"
+}
