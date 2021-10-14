@@ -15,9 +15,9 @@
     "es_MX": "Información adicional",
     "th": "ข้อมูลเพิ่มเติม",
     "vi": "Thông tin bổ sung",
-    "package": "Misssing",
-    "packageName": "Misssing",
-    "masterInfoLabel": "Misssing",
+    "package": "CustomLabel$CEC_Shipment_Additional_Info",
+    "packageName": "CustomLabel",
+    "masterInfoLabel": "Additional Info",
     "file": "shipmentIdentifier.xlsx",
     "sheet": "Sheet3"
   },
@@ -37,9 +37,9 @@
     "es_MX": "Aplicable",
     "th": "ใช้บังคับได้",
     "vi": "Áp dụng",
-    "package": "Misssing",
-    "packageName": "Misssing",
-    "masterInfoLabel": "Misssing",
+    "package": "CustomField$CEC_ShippingIdentifier__c.CEC_Applicable__c | CustomLabel$CEC_ShipmentIdentifier_Applicable",
+    "packageName": "CustomField | CustomLabel",
+    "masterInfoLabel": "Applicable",
     "file": "shipmentIdentifier.xlsx",
     "sheet": "Sheet3"
   },
@@ -59,9 +59,9 @@
     "es_MX": "No se pueden asignar casos a esta cola o usuario.",
     "th": "Boon See",
     "vi": "",
-    "package": "Misssing",
-    "packageName": "Misssing",
-    "masterInfoLabel": "Misssing",
+    "package": "ValidationRule$Case.CEC_RestrictContactCaseOwnership | ValidationRule$Case.CEC_Restrict_SSR_And_Specialized_Users | ValidationRule$Case.CEC_Restrict_UPS_CEC_SRC | CustomLabel$cec_AR_case_Restrict_Owner_ship",
+    "packageName": "ValidationRule | CustomLabel",
+    "masterInfoLabel": "Cases cannot be assigned to this queue or user.",
     "file": "shipmentIdentifier.xlsx",
     "sheet": "Sheet2"
   }
