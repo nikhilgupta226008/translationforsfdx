@@ -1,7 +1,7 @@
 {
-    "SourceOfTruthOrg": "https://upsdrive--cecsup40.my.salesforce.com",
-    "DevOrg": "https://upsdrive--cecsup40.my.salesforce.com",
-    "ExportIdentifier": "2021-09-09",
+    "SourceOfTruthOrg": "https://upsdrive--cecgcd2.my.salesforce.com",
+    "DevOrg": "https://upsdrive--cecgcd2.my.salesforce.com",
+    "ExportIdentifier": "2021-10-14",
     "SFDXProject": "../../",
     "TranslationValidations": "TranslationValidations",
     "currentTransaltionsFile": "TranslationExistingSheet/SalesforceCurrentTranslations.xlsx",
