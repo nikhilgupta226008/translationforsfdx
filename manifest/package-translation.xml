@@ -27,6 +27,18 @@
   </types>
   <types>
     <name>CustomObjectTranslation</name>
+    <members>Case-zh_CN</members>
+    <members>Case-fr_CA</members>
+    <members>Case-fr</members>
+    <members>Case-de</members>
+    <members>Case-it</members>
+    <members>Case-ko</members>
+    <members>Case-pl</members>
+    <members>Case-pt_BR</members>
+    <members>Case-pt_PT</members>
+    <members>Case-es</members>
+    <members>Case-es_MX</members>
+    <members>Case-th</members>
     <members>-zh_CN</members>
     <members>-fr_CA</members>
     <members>-fr</members>
