@@ -126,8 +126,9 @@ function processFieldsAndLayout(languages, sObjects) {
 
 			var fieldsSobject = sObject == 'PersonAccount' ? 'Account' : sObject
 			fields[sObject] = []
-
+		try{
 			var customFields = fs.readdirSync(sfdxdir + '/objects/' + fieldsSobject + '/fields')
+		
 				.map(file => {
 					return convert.xml2js(fs.readFileSync(sfdxdir + '/objects/' + fieldsSobject + '/fields/' + file, 'utf-8'), { compact: true, spaces: 4 })
 				}).reduce((acc, v) => {
@@ -138,6 +139,11 @@ function processFieldsAndLayout(languages, sObjects) {
 					}
 					return acc
 				}, {})
+			}
+			catch(e)
+			{
+				console.log('sfdxTransaltionProcessor | custom fields ',e.message);
+			}
 			var customFieldsRelationships = fs.readdirSync(sfdxdir + '/objects/' + fieldsSobject + '/fields')
 				.map(file => {
 					return convert.xml2js(fs.readFileSync(sfdxdir + '/objects/' + fieldsSobject + '/fields/' + file, 'utf-8'), { compact: true, spaces: 4 })
@@ -167,7 +173,7 @@ function processFieldsAndLayout(languages, sObjects) {
 					var tflile = fs.readFileSync(filepath, 'utf-8')
 					tflilejson = convert.xml2js(tflile, { compact: true, spaces: 4 });
 
-					if (tflilejson.CustomFieldTranslation) {
+					if (tflilejson.CustomFieldTranslation && customFields) {
 						//console.log('sfdxTransaltionProcessor | ',tflilejson.CustomFieldTranslation)
 						var v = tflilejson.CustomFieldTranslation
 						if (translationsProvided[customFields[v.name._text]] && translationsProvided[customFields[v.name._text]][l]) {
