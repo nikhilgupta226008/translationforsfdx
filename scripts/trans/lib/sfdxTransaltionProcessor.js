@@ -256,8 +256,9 @@ function processFieldsAndLayout(languages, sObjects) {
 
 
 							})
-						})
 
+						})
+						console.log('tflilejson.CustomObjectTranslation.validationRules',tflilejson.CustomObjectTranslation.validationRules);
 						getArray(tflilejson.CustomObjectTranslation.validationRules).forEach(v => {
 							var comment = (v.errorMessage._comment || '').trim()
 							console.error("validationRules", comment, v)
