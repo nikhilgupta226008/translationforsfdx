@@ -39,18 +39,6 @@
     <members>Case-es</members>
     <members>Case-es_MX</members>
     <members>Case-th</members>
-    <members>-zh_CN</members>
-    <members>-fr_CA</members>
-    <members>-fr</members>
-    <members>-de</members>
-    <members>-it</members>
-    <members>-ko</members>
-    <members>-pl</members>
-    <members>-pt_BR</members>
-    <members>-pt_PT</members>
-    <members>-es</members>
-    <members>-es_MX</members>
-    <members>-th</members>
   </types>
   <version>49.0</version>
 </Package>
