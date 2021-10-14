@@ -310,7 +310,7 @@ class TransaltationMetadataExtractor {
 
                             if (this.config.delta && (languges.styles || languges.styles == '')) {
                                 this.package = Array.from(new Set([...this.package, ...masterInfo.map(v => v['package'].trim())]))
-                                this.packageParents=Array.from(new Set([...this.packageParents, ...masterInfo.map(v => v['parent'].trim())]))
+                                this.packageParents=Array.from(new Set([...this.packageParents, ...masterInfo.map(v => v['parent'])]))
                                 this.newItems.push(languges)
                             } else if (!this.config.delta) {
                                 this.package = Array.from(new Set([...this.package, ...masterInfo.map(v => v['package'].trim())]))
