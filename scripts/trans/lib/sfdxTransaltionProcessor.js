@@ -127,6 +127,7 @@ function processFieldsAndLayout(languages, sObjects) {
 			var fieldsSobject = sObject == 'PersonAccount' ? 'Account' : sObject
 			fields[sObject] = []
 		try{
+			try{
 			var customFields = fs.readdirSync(sfdxdir + '/objects/' + fieldsSobject + '/fields')
 		
 				.map(file => {
@@ -150,7 +151,12 @@ function processFieldsAndLayout(languages, sObjects) {
 					}
 					return acc
 				}, {})
-			
+			}
+			catch(e)
+			{
+				console.log('sfdxTransaltionProcessor | Missing fields ',e.message);
+			}
+				
 			//console.log('sfdxTransaltionProcessor | ',"LOG FR",fieldsSobject,customFieldsRelationships)	;
 
 
