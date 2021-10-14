@@ -9,6 +9,21 @@
     <members>*</members>
   </types>
   <types>
+    <name>CustomObjectTranslation</name>
+    <members>Case-de</members>
+    <members>Case-es</members>
+    <members>Case-es_MX</members>
+    <members>Case-fr</members>
+    <members>Case-fr_CA</members>
+    <members>Case-it</members>
+    <members>Case-ko</members>
+    <members>Case-pl</members>
+    <members>Case-pt_BR</members>
+    <members>Case-pt_PT</members>
+    <members>Case-th</members>
+    <members>Case-zh_CN</members>
+  </types>
+  <types>
     <name>ValidationRule</name>
     <members>Case.CEC_RestrictContactCaseOwnership</members>
     <members>Case.CEC_Restrict_SSR_And_Specialized_Users</members>
