@@ -139,11 +139,7 @@ function processFieldsAndLayout(languages, sObjects) {
 					}
 					return acc
 				}, {})
-			}
-			catch(e)
-			{
-				console.log('sfdxTransaltionProcessor | custom fields ',e.message);
-			}
+			
 			var customFieldsRelationships = fs.readdirSync(sfdxdir + '/objects/' + fieldsSobject + '/fields')
 				.map(file => {
 					return convert.xml2js(fs.readFileSync(sfdxdir + '/objects/' + fieldsSobject + '/fields/' + file, 'utf-8'), { compact: true, spaces: 4 })
@@ -154,7 +150,11 @@ function processFieldsAndLayout(languages, sObjects) {
 					}
 					return acc
 				}, {})
-
+			}
+			catch(e)
+			{
+				console.log('sfdxTransaltionProcessor | custom fields ',e.message);
+			}
 			//console.log('sfdxTransaltionProcessor | ',"LOG FR",fieldsSobject,customFieldsRelationships)	;
 
 
