@@ -289,7 +289,7 @@ function processFieldsAndLayout(languages, sObjects) {
 			//console.log('sfdxTransaltionProcessor | ',sObject, ' | ' + ' Fields', Array.from(new Set(fields[sObject])).map(v => "<members>" + fieldsSobject + "." + v + "</members>").join('\n'))
 		})
 	} catch (e) {
-		console.error('sfdxTransaltionProcessor|', e.message)
+		console.error('sfdxTransaltionProcessor|', e.message,e)
 	}
 
 }
