@@ -143,6 +143,7 @@ class TransaltationMetadataExtractor {
                 } else if (metadataName == 'ValidationFormula') {
                     v['package'] = 'ValidationRule$' + s[1] + '.' + s[2]
                 }
+                v.parent=s[1];
                 this.salesforceCurrentTranslationsFiltered.push(v)
 
             }
@@ -161,6 +162,7 @@ class TransaltationMetadataExtractor {
                 a[metadataName]['parent'] = Array.from(new Set([...(a[metadataName]['parent'] || []), s[1]]));
                 a[metadataName]['members'] = Array.from(new Set([...(a[metadataName]['members'] || []), s[2] ? s[1] + '.' + s[2] : s[1]]));
                 v['package'] = 'QuickAction$' + (s[2] ? s[1] + '.' + s[2] : s[1])
+                v.parent=s[1];
                 this.salesforceCurrentTranslationsFiltered.push(v)
             } else if (false) {//For Future
                 a[metadataName] = a[metadataName] || {}
