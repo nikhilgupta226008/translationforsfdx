@@ -312,7 +312,7 @@ class TransaltationMetadataExtractor {
 
                             if (this.config.delta && (languges.styles || languges.styles == '')) {
                                 this.package = Array.from(new Set([...this.package, ...masterInfo.map(v => v['package'].trim())]))
-                                console.log(masterInfo,'masterInfo');
+                               // console.log(masterInfo,'masterInfo');
                                 this.packageParents=Array.from(new Set([...this.packageParents, ...masterInfo.map(v => (v['parent'] || '').trim())]))
                                 this.newItems.push(languges)
                             } else if (!this.config.delta) {
@@ -490,8 +490,8 @@ class TransaltationMetadataExtractor {
                 transaltionType.members = this.languageCodes;
             }
             if (transaltionType.name == 'CustomObjectTranslation' && transaltionType.members.length == 0) {
-                console.log(this.packageParents,'this.packageParents');
-                transaltionType.members = this.packageParents.reduce((members, customOBject) => [...members, ...this.languageCodes.map(v => `${customOBject}-${v}`)], [])
+               // console.log(this.packageParents,'this.packageParents');
+                transaltionType.members = this.packageParents.filter(v=>v).reduce((members, customOBject) => [...members, ...this.languageCodes.map(v => `${customOBject}-${v}`)], [])
             }
             if (transaltionType.name == 'StandardValueSetTranslation') {
                 transaltionType.members = [...transaltionType.members, ...this.languageCodes.map(v => `${member}-${v}`)]
