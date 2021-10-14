@@ -14,6 +14,7 @@ class TransaltationMetadataExtractor {
     package = [];
     languageCodes = [];
     translatedLanguges = new Set();
+    packageParents=[];
     constructor(languages, config, sourceSfdx, destSfdx) {
         this.config = config
         this.languages = languages
@@ -309,11 +310,13 @@ class TransaltationMetadataExtractor {
 
                             if (this.config.delta && (languges.styles || languges.styles == '')) {
                                 this.package = Array.from(new Set([...this.package, ...masterInfo.map(v => v['package'].trim())]))
+                                this.packageParents=Array.from(new Set([...this.packageParents, ...masterInfo.map(v => v['parent'].trim())]))
                                 this.newItems.push(languges)
                             } else if (!this.config.delta) {
                                 this.package = Array.from(new Set([...this.package, ...masterInfo.map(v => v['package'].trim())]))
                                 this.newItems.push(languges)
                             }
+
                         }
 
                         var range = { s: { c: 0, r: 1 }, e: { c: 100, r: 1 } }
@@ -461,6 +464,7 @@ class TransaltationMetadataExtractor {
         }
     }
 
+
     async generatePackageXMl() {
         //console.log(this.package)
         this.package.sort()
@@ -483,7 +487,7 @@ class TransaltationMetadataExtractor {
                 transaltionType.members = this.languageCodes;
             }
             if (transaltionType.name == 'CustomObjectTranslation' && transaltionType.members.length == 0) {
-                transaltionType.members = this.allowedMetdataParents.reduce((members, customOBject) => [...members, ...this.languageCodes.map(v => `${customOBject}-${v}`)], [])
+                transaltionType.members = this.packageParents.reduce((members, customOBject) => [...members, ...this.languageCodes.map(v => `${customOBject}-${v}`)], [])
             }
             if (transaltionType.name == 'StandardValueSetTranslation') {
                 transaltionType.members = [...transaltionType.members, ...this.languageCodes.map(v => `${member}-${v}`)]
