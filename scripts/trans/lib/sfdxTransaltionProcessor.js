@@ -150,11 +150,7 @@ function processFieldsAndLayout(languages, sObjects) {
 					}
 					return acc
 				}, {})
-			}
-			catch(e)
-			{
-				console.log('sfdxTransaltionProcessor | custom fields ',e.message);
-			}
+			
 			//console.log('sfdxTransaltionProcessor | ',"LOG FR",fieldsSobject,customFieldsRelationships)	;
 
 
@@ -291,6 +287,11 @@ function processFieldsAndLayout(languages, sObjects) {
 
 				});
 			})
+		}
+		catch(e)
+		{
+			console.log('sfdxTransaltionProcessor | Missing Object ',e.message);
+		}
 			//console.log('sfdxTransaltionProcessor | ',sObject+' Fields',fields[sObject])
 			//console.log('sfdxTransaltionProcessor | ',sObject, ' | ' + ' Fields', Array.from(new Set(fields[sObject])).map(v => "<members>" + fieldsSobject + "." + v + "</members>").join('\n'))
 		})
