@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CEC_Restrict_UPS_CEC_SRC</fullName>
+    <active>false</active>
+    <errorConditionFormula>IF((CEC_Updated_from_IWT__c =false),
+IF(
+AND(
+$Profile.Name==&quot;UPS CEC SRC User&quot;,
+ISCHANGED(OwnerId),
+OR (
+Case_Owner_Role__c != null,
+AND (
+CONTAINS(CEC_Original_Queue_Name__c, &quot;CEC&quot;),
+NOT(CONTAINS(CEC_Original_Queue_Name__c, &quot;SRC&quot;))))
+),
+True,
+False
+),
+False
+)</errorConditionFormula>
+    <errorMessage>Cases cannot be assigned to this queue or user4.</errorMessage>
+</ValidationRule>

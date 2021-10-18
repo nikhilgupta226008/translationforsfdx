@@ -47,7 +47,7 @@ IF(
 ),
   False
 )</errorConditionFormula>
-        <errorMessage>Cases cannot be assigned to this queue or user.</errorMessage>
+        <errorMessage>Cases cannot be assigned to this queue or user1.</errorMessage>
     </validationRules>
     <validationRules>
         <fullName>CEC_Restrict_UPS_CEC_SRC</fullName>
@@ -68,6 +68,6 @@ False
 ),
 False
 )</errorConditionFormula>
-        <errorMessage>Cases cannot be assigned to this queue or user.</errorMessage>
+        <errorMessage>Cases cannot be assigned to this queue or user4.</errorMessage>
     </validationRules>
 </CustomObject>
