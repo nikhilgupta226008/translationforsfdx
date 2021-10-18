@@ -15,7 +15,7 @@
     "es_MX": "No se pueden asignar casos a esta cola o usuario.",
     "th": "Boon See",
     "vi": "",
-    "package": "ValidationRule$Case.CEC_RestrictContactCaseOwnership | ValidationRule$Case.CEC_Restrict_SSR_And_Specialized_Users | ValidationRule$Case.CEC_Restrict_UPS_CEC_SRC | CustomLabel$cec_AR_case_Restrict_Owner_ship",
+    "package": "ValidationRule$Case.CEC_RestrictARCaseOwnerShip | ValidationRule$Case.CEC_RestrictContactCaseOwnership | ValidationRule$Case.CEC_Restrict_SSR_And_Specialized_Users | ValidationRule$Case.CEC_Restrict_UPS_CEC_SRC | CustomLabel$cec_AR_case_Restrict_Owner_ship",
     "packageName": "ValidationRule | CustomLabel",
     "masterInfoLabel": "Cases cannot be assigned to this queue or user.",
     "file": "shipmentIdentifier.xlsx",

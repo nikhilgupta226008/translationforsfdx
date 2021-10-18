@@ -21,6 +21,7 @@
   </types>
   <types>
     <name>ValidationRule</name>
+    <members>Case.CEC_RestrictARCaseOwnerShip</members>
     <members>Case.CEC_RestrictContactCaseOwnership</members>
     <members>Case.CEC_Restrict_SSR_And_Specialized_Users</members>
     <members>Case.CEC_Restrict_UPS_CEC_SRC</members>
