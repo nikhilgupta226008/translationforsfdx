@@ -170,129 +170,134 @@ function processFieldsAndLayout(languages, sObjects) {
 				var dirPrefix = sfdxdir + '/objectTranslations/' + sObject + '-'
 
 				var dirpath = dirPrefix + l
-				fs.readdirSync(dirPrefix + l).forEach(file => {
-					var filepath = dirPrefix + l + '/' + file
-					//console.log('sfdxTransaltionProcessor | ',dirPrefix+l+'/'+file);
-					var tflile = fs.readFileSync(filepath, 'utf-8')
-					tflilejson = convert.xml2js(tflile, { compact: true, spaces: 4 });
+				
+				try {
+					fs.readdirSync(dirPrefix + l).forEach(file => {
+						var filepath = dirPrefix + l + '/' + file
+						//console.log('sfdxTransaltionProcessor | ',dirPrefix+l+'/'+file);
+						var tflile = fs.readFileSync(filepath, 'utf-8')
+						tflilejson = convert.xml2js(tflile, { compact: true, spaces: 4 });
 
-					if (tflilejson.CustomFieldTranslation && customFields) {
-						//console.log('sfdxTransaltionProcessor | ',tflilejson.CustomFieldTranslation)
-						var v = tflilejson.CustomFieldTranslation
-						if (translationsProvided[customFields[v.name._text]] && translationsProvided[customFields[v.name._text]][l]) {
-							delete v.label._comment
-							v.label._text = encode(translationsProvided[customFields[v.name._text]][l])
-							//console.log('sfdxTransaltionProcessor | ','Success F', '|', customFields[v.name._text], '|', l)
-							fields[sObject].push(v.name._text)
-							transaltedFoundLabels.add(customFields[v.name._text])
-						} else {
-
-							handlCommments(v.label)
-						}
-
-						if (translationsProvided[customFieldsRelationships[v.name._text]] && translationsProvided[customFieldsRelationships[v.name._text]][l]) {
-							delete v.label._comment
-							v.label._text = encode(translationsProvided[customFieldsRelationships[v.name._text]][l])
-							//console.log('sfdxTransaltionProcessor | ','Success FR', '|', customFieldsRelationships[v.name._text], '|', l)
-							fields[sObject].push(v.name._text)
-							transaltedFoundLabels.add(customFieldsRelationships[v.name._text])
-						}
-
-
-
-						handlCommments(v.help)
-						if (v.relationshipLabel)
-							handlCommments(v.relationshipLabel)
-						//handlCommmentsInList(v.picklistValues)
-						//console.log('sfdxTransaltionProcessor | ',v.picklistValues)
-						getArray(v.picklistValues).forEach(v => {
-							var comment = decode((v.translation._comment || v.masterLabel._text || '').trim())
-							//console.log('sfdxTransaltionProcessor | ',translationsProvided[comment],comment)
-							if (translationsProvided[comment] && translationsProvided[comment][l]) {
-
-								v.translation._text = encode(translationsProvided[comment][l])
-								//console.log('sfdxTransaltionProcessor | ','Success Picklist', '|', comment, '|', v.translation._text, '|', l)
-								delete v.translation._comment
-								transaltedFoundLabels.add(comment)
+						if (tflilejson.CustomFieldTranslation && customFields) {
+							//console.log('sfdxTransaltionProcessor | ',tflilejson.CustomFieldTranslation)
+							var v = tflilejson.CustomFieldTranslation
+							if (translationsProvided[customFields[v.name._text]] && translationsProvided[customFields[v.name._text]][l]) {
+								delete v.label._comment
+								v.label._text = encode(translationsProvided[customFields[v.name._text]][l])
+								//console.log('sfdxTransaltionProcessor | ','Success F', '|', customFields[v.name._text], '|', l)
+								fields[sObject].push(v.name._text)
+								transaltedFoundLabels.add(customFields[v.name._text])
 							} else {
-								handlCommments(v.translation)
+
+								handlCommments(v.label)
+							}
+
+							if (translationsProvided[customFieldsRelationships[v.name._text]] && translationsProvided[customFieldsRelationships[v.name._text]][l]) {
+								delete v.label._comment
+								v.label._text = encode(translationsProvided[customFieldsRelationships[v.name._text]][l])
+								//console.log('sfdxTransaltionProcessor | ','Success FR', '|', customFieldsRelationships[v.name._text], '|', l)
+								fields[sObject].push(v.name._text)
+								transaltedFoundLabels.add(customFieldsRelationships[v.name._text])
 							}
 
 
-						})
 
-
-
-
-
-
-					}
-					if (tflilejson.CustomObjectTranslation) {
-						var quickActionsMap = getQuickActionMap()
-
-						//console.log('sfdxTransaltionProcessor | ',"Log: quickActions",tflilejson.CustomObjectTranslation.quickActions,quickActionsMap)
-						if (quickActionsMap)
-							getArray(tflilejson.CustomObjectTranslation.quickActions).forEach(v => {
-								var label = quickActionsMap[sObject + '.' + v.name._text]
-								//console.log('sfdxTransaltionProcessor | ',quickActionsMap[sObject + '.' + v.name._text], sObject + '.' + v.name._text)
-								if (translationsProvided[label] && translationsProvided[label][l]) {
-
-									v.label._text = encode(translationsProvided[label][l])
-									//console.log('sfdxTransaltionProcessor | ','Success Q', '|', label, '|', l)
-									delete v.label._comment
-									transaltedFoundLabels.add(label)
-								} else {
-									handlCommments(v.label)
-								}
-
-
-							})
-
-						getArray(tflilejson.CustomObjectTranslation.layouts).forEach(layout => {
-
-							layout.sections.forEach(v => {
-								var comment = decode((v.label._comment || v.section._text).trim())
-								//console.log('sfdxTransaltionProcessor | ',translationsProvided[comment],v.label._comment)
+							handlCommments(v.help)
+							if (v.relationshipLabel)
+								handlCommments(v.relationshipLabel)
+							//handlCommmentsInList(v.picklistValues)
+							//console.log('sfdxTransaltionProcessor | ',v.picklistValues)
+							getArray(v.picklistValues).forEach(v => {
+								var comment = decode((v.translation._comment || v.masterLabel._text || '').trim())
+								//console.log('sfdxTransaltionProcessor | ',translationsProvided[comment],comment)
 								if (translationsProvided[comment] && translationsProvided[comment][l]) {
 
-									v.label._text = encode(translationsProvided[comment][l])
-									//console.log('sfdxTransaltionProcessor | ','Success S', '|', translationsProvided[comment][l], '|', comment, '|', l)
-									delete v.label._comment
+									v.translation._text = encode(translationsProvided[comment][l])
+									//console.log('sfdxTransaltionProcessor | ','Success Picklist', '|', comment, '|', v.translation._text, '|', l)
+									delete v.translation._comment
 									transaltedFoundLabels.add(comment)
 								} else {
-									handlCommments(v.label)
+									handlCommments(v.translation)
 								}
 
 
 							})
 
-						})
-						//console.log('tflilejson.CustomObjectTranslation.validationRules',tflilejson.CustomObjectTranslation.validationRules);
-						getArray(tflilejson.CustomObjectTranslation.validationRules).forEach(v => {
-							var comment = (v.errorMessage._comment || '').trim()
-							// console.error("validationRules", comment, v)
-
-							if (translationsProvided[comment] && translationsProvided[comment][l]) {
-
-								v.errorMessage._text = encode(translationsProvided[comment][l])
-								//console.log('sfdxTransaltionProcessor | ','Success V', '|', comment, '|', l)
-								delete v.errorMessage._comment
-								transaltedFoundLabels.add(comment)
-							} else {
-								handlCommments(v.errorMessage)
-							}
-						})
-						handlCommmentsInList(tflilejson.CustomObjectTranslation.recordTypes)
 
 
-						handlCommmentsInList(tflilejson.CustomObjectTranslation.caseValues)
-						handlCommmentsInList(tflilejson.CustomObjectTranslation.gender)
-						handlCommmentsInList(tflilejson.CustomObjectTranslation.startsWith)
-					}
-					var tflilexml = convert.js2xml(tflilejson, { sanitize: false, compact: true, ignoreComment: true, spaces: 4 });
-					saveFile(filepath, tflilexml)
 
-				});
+
+
+						}
+						if (tflilejson.CustomObjectTranslation) {
+							var quickActionsMap = getQuickActionMap()
+
+							//console.log('sfdxTransaltionProcessor | ',"Log: quickActions",tflilejson.CustomObjectTranslation.quickActions,quickActionsMap)
+							if (quickActionsMap)
+								getArray(tflilejson.CustomObjectTranslation.quickActions).forEach(v => {
+									var label = quickActionsMap[sObject + '.' + v.name._text]
+									//console.log('sfdxTransaltionProcessor | ',quickActionsMap[sObject + '.' + v.name._text], sObject + '.' + v.name._text)
+									if (translationsProvided[label] && translationsProvided[label][l]) {
+
+										v.label._text = encode(translationsProvided[label][l])
+										//console.log('sfdxTransaltionProcessor | ','Success Q', '|', label, '|', l)
+										delete v.label._comment
+										transaltedFoundLabels.add(label)
+									} else {
+										handlCommments(v.label)
+									}
+
+
+								})
+
+							getArray(tflilejson.CustomObjectTranslation.layouts).forEach(layout => {
+
+								layout.sections.forEach(v => {
+									var comment = decode((v.label._comment || v.section._text).trim())
+									//console.log('sfdxTransaltionProcessor | ',translationsProvided[comment],v.label._comment)
+									if (translationsProvided[comment] && translationsProvided[comment][l]) {
+
+										v.label._text = encode(translationsProvided[comment][l])
+										//console.log('sfdxTransaltionProcessor | ','Success S', '|', translationsProvided[comment][l], '|', comment, '|', l)
+										delete v.label._comment
+										transaltedFoundLabels.add(comment)
+									} else {
+										handlCommments(v.label)
+									}
+
+
+								})
+
+							})
+							//console.log('tflilejson.CustomObjectTranslation.validationRules',tflilejson.CustomObjectTranslation.validationRules);
+							getArray(tflilejson.CustomObjectTranslation.validationRules).forEach(v => {
+								var comment = (v.errorMessage._comment || '').trim()
+								// console.error("validationRules", comment, v)
+
+								if (translationsProvided[comment] && translationsProvided[comment][l]) {
+
+									v.errorMessage._text = encode(translationsProvided[comment][l])
+									//console.log('sfdxTransaltionProcessor | ','Success V', '|', comment, '|', l)
+									delete v.errorMessage._comment
+									transaltedFoundLabels.add(comment)
+								} else {
+									handlCommments(v.errorMessage)
+								}
+							})
+							handlCommmentsInList(tflilejson.CustomObjectTranslation.recordTypes)
+
+
+							handlCommmentsInList(tflilejson.CustomObjectTranslation.caseValues)
+							handlCommmentsInList(tflilejson.CustomObjectTranslation.gender)
+							handlCommmentsInList(tflilejson.CustomObjectTranslation.startsWith)
+						}
+						var tflilexml = convert.js2xml(tflilejson, { sanitize: false, compact: true, ignoreComment: true, spaces: 4 });
+						saveFile(filepath, tflilexml)
+
+					});
+				} catch (error) {
+						console.log('sfdxTransaltionProcessor | Missing languagefile ',e.message)
+				}
 			})
 		}
 		catch(e)
