@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <validationRules>
-        <errorMessage><!-- Cases cannot be assigned to this queue or user. --></errorMessage>
+        <errorMessage>Boon See</errorMessage>
         <name>CEC_RestrictARCaseOwnerShip</name>
     </validationRules>
     <validationRules>
-        <errorMessage><!-- Cases cannot be assigned to this queue or user. --></errorMessage>
+        <errorMessage>Boon See</errorMessage>
         <name>CEC_RestrictContactCaseOwnership</name>
     </validationRules>
     <validationRules>
