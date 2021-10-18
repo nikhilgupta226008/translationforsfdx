@@ -50,9 +50,6 @@ const {Directory} =require('./lib/dir');
         console.log("Components Converted |",sfdxconvert)
 
 
-
-
-
     } catch (error) {
         console.error(error.stack)
     }
