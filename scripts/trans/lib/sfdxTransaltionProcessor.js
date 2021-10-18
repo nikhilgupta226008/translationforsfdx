@@ -164,6 +164,7 @@ function processFieldsAndLayout(languages, sObjects) {
 				var logs = [];
 				var translated = {};
 				logs.push('Language ' + l)
+				console.log('Language ' + l)
 
 
 				var dirPrefix = sfdxdir + '/objectTranslations/' + sObject + '-'
