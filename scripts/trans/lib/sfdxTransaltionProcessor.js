@@ -295,7 +295,7 @@ function processFieldsAndLayout(languages, sObjects) {
 						saveFile(filepath, tflilexml)
 
 					});
-				} catch (error) {
+				} catch (e) {
 						console.log('sfdxTransaltionProcessor | Missing languagefile ',e.message)
 				}
 			})
