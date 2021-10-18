@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
-    <customLabels>
-        <label>Casos no pueden ser asignados a esta cola o usuario.</label>
-        <name>cec_AR_case_Restrict_Owner_ship</name>
-    </customLabels>
-</Translations>
