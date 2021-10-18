@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <validationRules>
-        <errorMessage>Casos não podem ser atribuídos a essa fila ou usuário.</errorMessage>
+        <errorMessage><!-- Cases cannot be assigned to this queue or user. --></errorMessage>
         <name>CEC_RestrictContactCaseOwnership</name>
     </validationRules>
     <validationRules>
-        <errorMessage>Casos não podem ser atribuídos a essa fila ou usuário.</errorMessage>
+        <errorMessage><!-- Cases cannot be assigned to this queue or user. --></errorMessage>
         <name>CEC_Restrict_SSR_And_Specialized_Users</name>
     </validationRules>
     <validationRules>
-        <errorMessage>Casos não podem ser atribuídos a essa fila ou usuário.</errorMessage>
+        <errorMessage><!-- Cases cannot be assigned to this queue or user. --></errorMessage>
         <name>CEC_Restrict_UPS_CEC_SRC</name>
     </validationRules>
 </CustomObjectTranslation>
