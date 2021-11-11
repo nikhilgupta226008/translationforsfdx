@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+  <types>
+    <name>CustomLabels</name>
+    <members>CustomLabels</members>
+  </types>
+  <types>
+    <name>CustomLabel</name>
+    <members>*</members>
+  </types>
+  <types>
+    <name>Translations</name>
+    <members>de</members>
+    <members>el</members>
+    <members>es</members>
+    <members>es_MX</members>
+    <members>fr</members>
+    <members>it</members>
+    <members>ko</members>
+    <members>pl</members>
+    <members>pt_BR</members>
+    <members>pt_PT</members>
+    <members>th</members>
+    <members>vi</members>
+    <members>zh_CN</members>
+  </types>
+  <version>52.0</version>
+  <fullName>translations-package</fullName>
+</Package>
