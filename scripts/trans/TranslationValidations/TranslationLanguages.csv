@@ -1,8 +1,8 @@
 ﻿Language,Label,disabled
 "zh_CN","Chinese (Simplified)APAC",""
-"fr_CA","FrenchCANADA",""
 "fr","FrenchEU",""
 "de","GermanEU",""
+"el","GreekEU",""
 "it","ItalianEU",""
 "ko","KoreanAPAC",""
 "pl","PolishEU",""
@@ -11,3 +11,4 @@
 "es","Spanish (Europe)EU",""
 "es_MX","Spanish (Mexico)LATAM",""
 "th","ThaiAPAC",""
+"vi","VietnameseAPAC",""

@@ -2,14 +2,14 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
   <types>
     <name>CustomLabel</name>
-    <members>cec_AR_case_Restrict_Owner_ship</members>
+    <members>CEC_Attention</members>
   </types>
   <types>
     <name>Translations</name>
     <members>zh_CN</members>
-    <members>fr_CA</members>
     <members>fr</members>
     <members>de</members>
+    <members>el</members>
     <members>it</members>
     <members>ko</members>
     <members>pl</members>
@@ -18,28 +18,7 @@
     <members>es</members>
     <members>es_MX</members>
     <members>th</members>
-  </types>
-  <types>
-    <name>ValidationRule</name>
-    <members>Case.CEC_RestrictARCaseOwnerShip</members>
-    <members>Case.CEC_RestrictContactCaseOwnership</members>
-    <members>Case.CEC_Restrict_SSR_And_Specialized_Users</members>
-    <members>Case.CEC_Restrict_UPS_CEC_SRC</members>
-  </types>
-  <types>
-    <name>CustomObjectTranslation</name>
-    <members>Case-zh_CN</members>
-    <members>Case-fr_CA</members>
-    <members>Case-fr</members>
-    <members>Case-de</members>
-    <members>Case-it</members>
-    <members>Case-ko</members>
-    <members>Case-pl</members>
-    <members>Case-pt_BR</members>
-    <members>Case-pt_PT</members>
-    <members>Case-es</members>
-    <members>Case-es_MX</members>
-    <members>Case-th</members>
+    <members>vi</members>
   </types>
   <version>49.0</version>
 </Package>
