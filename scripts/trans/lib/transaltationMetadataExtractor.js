@@ -279,7 +279,7 @@ class TransaltationMetadataExtractor {
                                         if (translated == "1") {
                                             translated = ""
                                         }
-                                            console.log("TME",translated)
+                                        console.log("TME",translated,key)
                                         languges[key] = translated.replace(/\r?\n|\r/g, '').trim()//Untill pro
 
                                         if (languges[key]) {
