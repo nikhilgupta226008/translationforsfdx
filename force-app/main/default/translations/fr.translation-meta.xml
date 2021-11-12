@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Translations xmlns="http://soap.sforce.com/2006/04/metadata">
     <customLabels>
-        <label><!-- CEC_Associated_Contacts --></label>
+        <label>Données IVP</label>
         <name>CEC_Associated_Contacts</name>
     </customLabels>
     <customLabels>
-        <label><!-- CEC_Attention --></label>
+        <label>À l'attention de</label>
         <name>CEC_Attention</name>
     </customLabels>
     <customLabels>
-        <label><!-- CEC_Delivery --></label>
+        <label>Livraison</label>
         <name>CEC_Delivery</name>
     </customLabels>
     <customLabels>
-        <label><!-- CEC_Last_Exception --></label>
+        <label>Dernière exception</label>
         <name>CEC_Last_Exception</name>
     </customLabels>
     <customLabels>
-        <label>Nom complet</label>
+        <label>Nom</label>
         <name>CEC_Name</name>
     </customLabels>
     <customLabels>
-        <label><!-- CEC_Ship_From --></label>
+        <label>Expéditeur</label>
         <name>CEC_Ship_From</name>
     </customLabels>
     <customLabels>
-        <label><!-- CEC_Ship_To --></label>
+        <label>Destinataire</label>
         <name>CEC_Ship_To</name>
     </customLabels>
 </Translations>
