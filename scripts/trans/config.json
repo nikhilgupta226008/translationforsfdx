@@ -9,6 +9,7 @@
     "transaltionRequestExcelsLabelRow": 1,
     "transaltionRequestExcelsLastRow": 30,
     "delta":false,
+    
     "allowedMetdata": [
         {
             "name": "ButtonOrLink"
