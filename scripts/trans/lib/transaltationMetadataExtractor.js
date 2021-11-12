@@ -256,7 +256,7 @@ class TransaltationMetadataExtractor {
                                     var languageFind = this.languages.find(v2 => v2.Label == key)
                                     if (languageFind) {
                                         key = languageFind.Language;
-                                        //console.log("TME",file,",",first_sheet_name,",",key)
+                                        console.log("TME",file,",",first_sheet_name,",",key)
 
 
                                         var translated = splitBy ? getSheetValue(i, C).split(splitBy)[labelindex] || "" : getSheetValue(i, C)
