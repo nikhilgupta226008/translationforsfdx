@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>CEC_Associated_Contacts</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CEC_Associated_Contacts</shortDescription>
+        <value>IVP Information</value>
+    </labels>
+    <labels>
+        <fullName>CEC_Delivery</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CEC_Delivery</shortDescription>
+        <value>Delivery</value>
+    </labels>
+    <labels>
+        <fullName>CEC_Last_Exception</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CEC_Last_Exception</shortDescription>
+        <value>Last Exception</value>
+    </labels>
+    <labels>
+        <fullName>CEC_Name</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CEC Name</shortDescription>
+        <value>Name</value>
+    </labels>
+    <labels>
+        <fullName>CEC_Ship_From</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CEC_Ship_From</shortDescription>
+        <value>Ship From</value>
+    </labels>
+    <labels>
+        <fullName>CEC_Ship_To</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CEC_Ship_To</shortDescription>
+        <value>Ship To</value>
+    </labels>
+</CustomLabels>
