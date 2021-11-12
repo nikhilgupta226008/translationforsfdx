@@ -1,4 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
+  <types>
+    <name>CustomField</name>
+    <members>CEC_User_Out_of_Office__c.Name__c</members>
+  </types>
+  <types>
+    <name>CustomObjectTranslation</name>
+  </types>
+  <types>
+    <name>CustomLabel</name>
+    <members>CEC_Associated_Contacts</members>
+    <members>CEC_Delivery</members>
+    <members>CEC_Last_Exception</members>
+    <members>CEC_Name</members>
+    <members>CEC_Ship_From</members>
+    <members>CEC_Ship_To</members>
+  </types>
+  <types>
+    <name>Translations</name>
+    <members>zh_CN</members>
+    <members>fr</members>
+    <members>de</members>
+    <members>el</members>
+    <members>it</members>
+    <members>ko</members>
+    <members>pl</members>
+    <members>pt_BR</members>
+    <members>pt_PT</members>
+    <members>es</members>
+    <members>es_MX</members>
+    <members>th</members>
+    <members>vi</members>
+  </types>
   <version>49.0</version>
 </Package>
