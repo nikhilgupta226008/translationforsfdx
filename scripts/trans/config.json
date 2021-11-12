@@ -8,7 +8,7 @@
     "transaltionRequestExcels": "TranslationRequestExcels",
     "transaltionRequestExcelsLabelRow": 1,
     "transaltionRequestExcelsLastRow": 30,
-    "delta":true,
+    "delta":false,
     "allowedMetdata": [
         {
             "name": "ButtonOrLink"
