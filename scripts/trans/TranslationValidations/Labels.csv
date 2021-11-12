@@ -57,7 +57,7 @@
 "CustomLabel.CEC_Associated_Contacts","IVP Information","Transalted","No"
 "CustomLabel.CEC_Assume_Responsibility","Assume Responsibility","Will be Transalted","No"
 "CustomLabel.CEC_Assume_Responsibility_Confirmation","Maintain Responsibility is already active for this case. Click Submit to accept responsibility","Will be Transalted","No"
-"CustomLabel.CEC_Attention","Attn","Will be Transalted","No"
+"CustomLabel.CEC_Attention","Attn","Transalted","No"
 "CustomLabel.CEC_Available_Skills","Available Skills","Will be Transalted","No"
 "CustomLabel.CEC_Batch_Subject","Exceeded limit in Queue","Will be Transalted","No"
 "CustomLabel.CEC_Batch_message_header","Dear Team,<br><br>Following Queues has exceeded the threshold limit :<br><br><table border="1" style="border-collapse: collapse"><tr><th> Queue Name </th><th>  Threshold Limit  </th><th>  Current Limit  </th></tr>","Will be Transalted","No"

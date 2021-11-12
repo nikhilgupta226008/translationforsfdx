@@ -10,6 +10,7 @@
   <types>
     <name>CustomLabel</name>
     <members>CEC_Associated_Contacts</members>
+    <members>CEC_Attention</members>
     <members>CEC_Delivery</members>
     <members>CEC_Last_Exception</members>
     <members>CEC_Name</members>

@@ -1,4 +1,26 @@
 {
+  "Attn": {
+    "label": "Attn",
+    "styles": "FFF2CC",
+    "zh_CN": "注意",
+    "fr": "À l'attention de",
+    "de": "Beachtung",
+    "el": "Προσοχή",
+    "it": "Attenzione",
+    "ko": "주목",
+    "pl": "Uwaga",
+    "pt_BR": "Atenção",
+    "pt_PT": "Atenção",
+    "es": "Atención",
+    "es_MX": "Atención",
+    "th": "ความสนใจ",
+    "vi": "Liên Hệ",
+    "package": "CustomLabel$CEC_Attention",
+    "packageName": "CustomLabel",
+    "masterInfoLabel": "Attn",
+    "file": "IVP Contact Creation Translations.xlsx",
+    "sheet": "Sheet1"
+  },
   "Delivery": {
     "label": "Delivery",
     "zh_CN": "派送",
