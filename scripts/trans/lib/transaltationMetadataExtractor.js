@@ -256,7 +256,7 @@ class TransaltationMetadataExtractor {
                                     var languageFind = this.languages.find(v2 => v2.Label == key)
                                     if (languageFind) {
                                         key = languageFind.Language;
-                                        console.log("TME",file,",",first_sheet_name,",",key)
+                                       // console.log("TME",file,",",first_sheet_name,",",key)
 
 
                                         var translated = splitBy ? getSheetValue(i, C).split(splitBy)[labelindex] || "" : getSheetValue(i, C)
@@ -274,11 +274,12 @@ class TransaltationMetadataExtractor {
                                             //console.log("TME",translated)
 
                                         }
+
                                         // To fix 1 vaues
                                         if (translated == "1") {
                                             translated = ""
                                         }
-
+                                            console.log("TME",translated)
                                         languges[key] = translated.replace(/\r?\n|\r/g, '').trim()//Untill pro
 
                                         if (languges[key]) {
